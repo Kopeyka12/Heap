@@ -8,6 +8,7 @@ using namespace std;
 
 
 int main() {
+
     setlocale(LC_ALL, "Russian");
     int arr1[10] = {50, 20, 60, 65, 15, 25, 10, 30, 4, 45};
     cout << "Исходный массив:" << endl;

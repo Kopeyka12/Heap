@@ -119,7 +119,7 @@ void Heap<T>::PrintHeap()
     {
         std::cout << hlist[i] << " ";
     }
-    std::cout << std::endl;
+    //std::cout << std::endl;
 }
 
 // удалить значение корневого элемента и обновить пирамиду
