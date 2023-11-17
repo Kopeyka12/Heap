@@ -6,23 +6,27 @@
 
 using namespace std;
 
+
 int main() {
-    Heap heap;
-    heap.insert(3);
-    heap.insert(5);
-    heap.insert(1);
-    heap.insert(2);
-    heap.insert(4);
+    setlocale(LC_ALL, "Russian");
+    int arr1[10] = {50, 20, 60, 65, 15, 25, 10, 30, 4, 45};
+    cout << "Исходный массив:" << endl;
 
-    heap.printHeap(); // Output: 5 4 1 3 2
+    for (int i = 0; i < 10; i++) {
+        cout << arr1[i] << " ";
+    }
 
-    heap.remove();
-    heap.printHeap(); // Output: 4 3 1 2
+    Heap<int> h(arr1, 10);
+    // распечатать новую версию массива А
+    cout << "\nКуча:" << endl;
+    
+    h.PrintHeap();
 
-    heap.remove();
-    heap.printHeap(); // Output: 3 2 1
+    HeapSort(arr1, 10);
+    cout << "\nОтсортированная по убыванию куча: " << endl;
 
-    return 0;
+    h.PrintHeap();
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
